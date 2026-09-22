@@ -42,7 +42,7 @@ const crewList = [
     { name: "Luffy", bounty: 1500000000, strength: 300 },
     { name: "Zoro", bounty: 320000000, strength: 500 },
     { name: "Sanji", bounty: 330000000, strength: 400 },
-    { name: "Nami", bounty: 66000000, strength: 200 },      
+    { name: "Nami", bounty: 66000000, strength: 200 },
     { name: "Chopper", bounty: 1000, strength: 100 }
 ];
 
@@ -53,7 +53,7 @@ function printBountyLeaderBoard(crewList) {
     for (let i = 0; i < crewList.length; i++) {
         const member = crewList[i];
         const icon = icons[i] || '';
-        console.log(`Name: ${icon}${member.name} - Bounty: ${member.bounty}`);
+        console.log(`${icon} ${i+1}. Name: ${member.name} - Bounty: ${member.bounty}`);
     };
 };
 

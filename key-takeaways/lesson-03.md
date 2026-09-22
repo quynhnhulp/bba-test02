@@ -10,6 +10,27 @@ git reset --soft HEAD~1
 - Đưa nội dung commit cuối về working directory: (Repository --> working directory)
 ```
 git reset  HEAD~1
+
+git reset HEAD~3: đưa nội dung của 3 commit gần nhất về working directory
+```
+
+```
+Trong một folder mới được tạo ra, mình thực hiện lần lượt các lệnh sau. Hãy liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh sau:
+
+a. Tạo 3 file: file1, file2, file3 : Local: file1, file2, file3 | Working: Trống | Staging: Trống | Repo: Trống
+b. Chạy lệnh: git init: : Local: file1, file2, file3 | Working: file1, file2, file3 | Staging: Trống | Repo: Trống
+c. Chạy lệnh: git add file1: Local: file1, file2, file3 | Working: file2, file3 | Staging: file1 | Repo: Trống
+d. Chạy lệnh: git commit -m”first commit”: Local: file1, file2, file3 | Working: file2, file3 | Staging: Trống | Repo: file1
+e. Chạy lệnh: git add file2 file3 : Local: file1, file2, file3 | Working: Trống | Staging: file2, file3 | Repo: file1
+f. Chạy lệnh: git restore --staged file3: Local: file1, file2, file3 | Working: file3 | Staging: file2 | Repo: file1
+h. Chạy lệnh: git commit -m"second commit": Local: file1, file2, file3 | Working: file3 | Staging: Trống | Repo: file1, file2
+i. Chạy lệnh: git reset HEAD~1:Local: file1, file2, file3 | Working: file2, file3 | Staging: Trống | Repo: file1
+==> 
+
+Local: file 1, file 2, file3
+
+Working Directory: file2, file3
+Repository: file1
 ```
 
 Note: 
